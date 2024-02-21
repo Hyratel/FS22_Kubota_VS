@@ -1,0 +1,2 @@
+Was unsatisfied with the unrealism of the Modhub version, went directly to the Kubota brochure for the spreader series. 
+All parameter changes are in line with public data on the implements found at https://www.kubotausa.com/docs/default-source/brochure-sheets/spreaders.pdf?sfvrsn=fab3afd9_6 (US units) or https://www.kubota-bg.com/wp2/wp-content/uploads/2017/12/Broshura-spetsializirani-torachki-Kubota.pdf (metric)
