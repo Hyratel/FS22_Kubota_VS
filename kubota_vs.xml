@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="spreader" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>VS 1350</name>
+        <specs>
+            <workingWidth>8.0</workingWidth>
+            <combination filterCategory="weights" filterSpec="weight" filterSpecMin="1500" filterSpecMax="1600"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_fertilizer</function>
+        </functions>
+        <image>kubota.png</image>
+        <price>18350</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KUBOTA</brand>
+        <category>fertilizerSpreaders</category>
+        <shopLoadingDelay initial="0.15"/>
+        <shopTranslationOffset>0 0.004 0</shopTranslationOffset>
+        <shopRotationOffset>0 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>874496</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>176640</indexBufferMemoryUsage>
+        <textureMemoryUsage>1703936</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_fertilizerSpreader</typeDesc>
+        <filename>kubota_vs.i3d</filename>
+        <size width="3.0" length="2.5" lengthOffset="0"/>
+        <speedLimit value="20" />
+        <components>
+            <component centerOfMass="0 0.3 0" solverIterationCount="10" mass="220"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+        <mapHotspot type="TOOL" />
+    </base>
+
+    <powerConsumer ptoRpm="540" neededMaxPtoPower="15"/>
+	
+    <powerTakeOffs>
+        <input inputAttacherJointIndices="1" detachNode="ptoDetachNode" inputNode="pto" aboveAttacher="false" />
+    </powerTakeOffs>
+
+    <lights>
+        <sharedLight linkNode="yellowRectangle_01_01" filename="$data/shared/assets/reflectors/lizard/yellowRectangle_01.xml" />
+        <sharedLight linkNode="yellowRectangle_01_02" filename="$data/shared/assets/reflectors/lizard/yellowRectangle_01.xml" />
+        <sharedLight linkNode="redRound_02_01" filename="$data/shared/assets/reflectors/lizard/redRound_01.xml" />
+        <sharedLight linkNode="redRound_02_02" filename="$data/shared/assets/reflectors/lizard/redRound_01.xml" />
+        <sharedLight linkNode="faro_iz" filename="$data/shared/assets/lights/lizard/rearLight03_left.xml" />
+        <sharedLight linkNode="faro_de" filename="$data/shared/assets/lights/lizard/rearLight03_right.xml" />
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh1" lightTypes="0" />
+                <brakeLight node="backLightsHigh1" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+            </high>
+        </realLights>
+    </lights>
+
+    <workAreas>
+        <workArea type="sprayer" functionName="processSprayerArea" disableBackwards="false" requiresGroundContact="false">
+            <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight" />
+            <onlyActiveWhenLowered value="false"/>
+        </workArea>
+    </workAreas>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="implement" topReferenceNode="topReferencePoint" lowerRotLimitScale="0 0 0" lowerTransLimitScale="0 0 0" upperRotationOffset="2" needsLowering="false" >
+                <distanceToGround lower="0.35" upper="0.95" />
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+    </attachable>
+
+    <connectionHoses>
+        <hose diameter="0.02" inputAttacherJointIndices="1" length="2.0" node="hc" straighteningFactor="1" type="hydraulicIn">
+            <objectChange node="cable_hidra" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="referencePoint" length="1.2" diameter="0.015" minDeltaY="-0.246">
+			<objectChange node="cab" rotationActive="0 0 0" rotationInactive="-81.48 0 0"/>
+			<objectChange node="electric_enchu" visibilityActive="true" visibilityInactive="false"/>
+		</hose>
+    </connectionHoses>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn01_detachedAdapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+    </dynamicallyLoadedParts>
+
+    <animations>
+		<animation name="turnedOnAnimation_mechanism" looping="true">
+            <part node="spreaderLeft" startTime="0.00" endTime="0.06" startRot="0 0 0" endRot="0 -30 0" />
+            <part node="spreaderLeft" startTime="0.06" endTime="0.12" startRot="0 -30 0" endRot="0 0 0" />
+            <part node="spreaderLeft" startTime="0.12" endTime="0.18" startRot="0 0 0" endRot="0 30 0" />
+            <part node="spreaderLeft" startTime="0.18" endTime="0.25" startRot="0 30 0" endRot="0 0 0" />
+        </animation>
+    </animations>
+
+	<fillUnit>
+		<fillUnitConfigurations>
+			<fillUnitConfiguration name="VS 1350" price="0">
+				<fillUnits>
+					<unloading width="11" offset="0 0 0"/>
+					<fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="fertilizer lime" capacity="1350">
+						<exactFillRootNode node="exactFillRootNode"/>
+					</fillUnit>
+				</fillUnits>
+				<objectChange node="body_sub_1350" visibilityActive="true" visibilityInactive="false"/>
+			</fillUnitConfiguration>
+			
+			<fillUnitConfiguration name="VS 1650" price="1500">
+			<fillUnits>
+				<unloading width="11" offset="0 0 0"/>
+				<fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="fertilizer lime" capacity="1650">
+					<exactFillRootNode node="exactFillRootNode"/>
+				</fillUnit>
+			</fillUnits>
+				<objectChange node="body_sub_1650" visibilityActive="true" visibilityInactive="false"/>
+			</fillUnitConfiguration>			
+		</fillUnitConfigurations>
+	</fillUnit>
+
+	<fillVolume>
+		<fillVolumeConfigurations>
+			<fillVolumeConfiguration>
+				<volumes>
+					<volume node="fillVolume" maxDelta="0.5" maxAllowedHeapAngle="18" fillUnitIndex="1"/>
+				</volumes>
+			</fillVolumeConfiguration>
+			<fillVolumeConfiguration>
+				<volumes>
+					<volume node="fillVolume1" maxDelta="0.5" maxAllowedHeapAngle="18" fillUnitIndex="1"/>
+				</volumes>
+			</fillVolumeConfiguration>			
+		</fillVolumeConfigurations>
+	</fillVolume>	
+
+    <sprayer fillUnitIndex="1">
+        <usageScales workAreaIndex="1" scale="1" />
+        <animationNodes>
+            <animationNode node="plato"  rotSpeed="-2500" turnOnFadeTime="0.6" turnOffFadeTime="2" />
+        </animationNodes>
+
+        <effects>
+            <effectNode effectClass="FertilizerMotionPathEffect" effectType="FERTILIZER" linkNode="fertilizerEffectLeft">
+				<motionPathEffect textureFilename="textures/curveArray3.dds" numRows="22" rowLength="32" minFade="0.09" />
+            </effectNode>
+        </effects>
+    </sprayer>
+
+
+    <turnOnVehicle>
+        <turnedOnAnimation name="turnedOnAnimation_mechanism" speedScale="4" turnOnFadeTime="2" turnOffFadeTime="2"/>
+	
+        <sounds>
+            <work template="DEFAULT_SPREADER" linkNode="kubota_maicomponet" />
+        </sounds>
+    </turnOnVehicle>
+
+
+    <ai>
+        <needsLowering value="false" />
+        <collisionTrigger node="aiCollisionNode" width="2.6" height="1.9"/>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack" />
+        <sizeMarkers leftNode="sizeMarkerLeft" rightNode="sizeMarkerRight" backNode="sizeMarkerBack" />
+        <agentAttachment width="2.5" height="2.0" length="1.8" lengthOffset="0"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.2" maxX="1.2" minZ="-0.45" maxZ="0.85" yOffset="0.25" />
+        <bendingNode minX="-1.3" maxX="1.3" minZ="-0.8" maxZ="0.7" yOffset="0.85" />
+    </foliageBending>
+	
+	<configurationSets title="$l10n_configuration_extension">
+		<configurationSet name="VS 1350">
+			<configuration name="fillVolume" index="1"/>
+			<configuration name="fillUnit"   index="1"/>			
+		</configurationSet>
+		<configurationSet name="VS 1650">
+			<configuration name="fillVolume" index="2"/>
+			<configuration name="fillUnit" index="2"/>
+		</configurationSet>		
+	</configurationSets>
+	
+	<designConfigurations title="$l10n_configuration_pegatinas">
+		<designConfiguration name="$l10n_configuration_antigua" price="100">
+			<objectChange node="decal_antigua" visibilityActive="true" visibilityInactive="false" />
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_nuevas" price="100">
+			<objectChange node="decal_moderna" visibilityActive="true" visibilityInactive="false" />
+		</designConfiguration>
+        <designConfiguration name="$l10n_configuration_ninguna">
+		</designConfiguration>
+	</designConfigurations>
+	
+	<design2Configurations title="$l10n_configuration_medidas">
+		<design2Configuration name="$l10n_configuration_m" price="100">
+			<objectChange node="enganche_mediano" visibilityActive="true" visibilityInactive="false" />
+			<objectChange node="bola1"         visibilityActive="true" visibilityInactive="false" />
+			<objectChange node="bola2"         visibilityActive="true" visibilityInactive="false" />
+		</design2Configuration>
+		<design2Configuration name="$l10n_configuration_xl" price="100">
+			<objectChange node="enganche_grande" visibilityActive="true" visibilityInactive="false" />
+			<objectChange node="bola_iz"         visibilityActive="true" visibilityInactive="false" />
+			<objectChange node="bola_de"         visibilityActive="true" visibilityInactive="false" />
+		</design2Configuration>
+	</design2Configurations>
+
+    <baseMaterial>
+        <material name="1350_mat_ryc1" baseNode="body">
+            <shaderParameter name="colorMat0" value="KUBOTA_ORANGE1"/>
+        </material>
+    </baseMaterial>
+	
+	<baseMaterialConfigurations useDefaultColors="false" price="300">
+		<baseMaterialConfiguration name="$l10n_configuration_kubota_orange_2"        color="KUBOTA_ORANGE1"                material="0" price="0"/>
+		<baseMaterialConfiguration name="$l10n_configuration_kubota_orange"          color="0.952 0.396 0.137"             material="0" price="300"/>
+		<baseMaterialConfiguration name="$l10n_configuration_kubota_blue_enamel"     color="0.00392 0.1882 0.298"          material="0" price="300"/>
+		<baseMaterialConfiguration name="$l10n_configuration_kubota_grey_enamel"     color="0.862 0.8666 0.8745"           material="0" price="300"/>
+		<baseMaterialConfiguration name="$l10n_configuration_kubota_beige_enamel"    color="0.1 0.941 0.850"               material="0" price="300"/>
+		<baseMaterialConfiguration name="$l10n_configuration_kubota_black_enamel"    color="KUBOTA_BLACK2"                 material="0" price="300"/>
+
+        <material name="1350_mat_ryc1" shaderParameter="colorMat0" />
+    </baseMaterialConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+<i3dMappings>
+  <i3dMapping id="kubota_maicomponet" node="0>" />
+  <i3dMapping id="attachable" node="0>0" />
+  <i3dMapping id="attacherJoint" node="0>0|0" />
+  <i3dMapping id="bola1" node="0>0|0|0" />
+  <i3dMapping id="bola2" node="0>0|0|1" />
+  <i3dMapping id="topReferencePoint" node="0>0|1" />
+  <i3dMapping id="bola3" node="0>0|1|0" />
+  <i3dMapping id="connectionHoses" node="0>0|2" />
+  <i3dMapping id="hydraulicIn01" node="0>0|2|0" />
+  <i3dMapping id="cable_hidra" node="0>0|2|0|0" />
+  <i3dMapping id="hydraulicIn01_detachedAdapter" node="0>0|2|0|0|0" />
+  <i3dMapping id="hydraulic" node="0>0|2|0|0|0|0" />
+  <i3dMapping id="electric" node="0>0|2|1" />
+  <i3dMapping id="referencePoint" node="0>0|2|1|0" />
+  <i3dMapping id="cab" node="0>0|2|1|1" />
+  <i3dMapping id="decals" node="0>0|2|1|2" />
+  <i3dMapping id="electric_enchu" node="0>0|2|1|3" />
+  <i3dMapping id="hc" node="0>0|3" />
+  <i3dMapping id="lights" node="0>1" />
+  <i3dMapping id="sharedLights" node="0>1|0" />
+  <i3dMapping id="yellowRectangle_01_01" node="0>1|0|0" />
+  <i3dMapping id="yellowRectangle_01_02" node="0>1|0|1" />
+  <i3dMapping id="redRound_02_01" node="0>1|0|2" />
+  <i3dMapping id="redRound_02_02" node="0>1|0|3" />
+  <i3dMapping id="faro_iz" node="0>1|0|4" />
+  <i3dMapping id="faro_de" node="0>1|0|5" />
+  <i3dMapping id="staticLights" node="0>1|1" />
+  <i3dMapping id="turnlightLef" node="0>1|1|0" />
+  <i3dMapping id="turnlightRight" node="0>1|1|1" />
+  <i3dMapping id="backLights" node="0>1|2" />
+  <i3dMapping id="backLightsHigh1" node="0>1|2|0" />
+  <i3dMapping id="backLightsHigh2" node="0>1|2|0|0" />
+  <i3dMapping id="turnLights" node="0>1|3" />
+  <i3dMapping id="turnLightLeftBack" node="0>1|3|0" />
+  <i3dMapping id="turnLightRightBack" node="0>1|3|1" />
+  <i3dMapping id="fillUnit" node="0>2" />
+  <i3dMapping id="exactFillRootNode" node="0>2|0" />
+  <i3dMapping id="fillVolume" node="0>2|1" />
+  <i3dMapping id="fillVolume1" node="0>2|2" />
+  <i3dMapping id="movingParts" node="0>3" />
+  <i3dMapping id="spreaderLeft" node="0>3|0" />
+  <i3dMapping id="spreaderLeft_lod01" node="0>3|0|0" />
+  <i3dMapping id="tubo" node="0>3|0|1" />
+  <i3dMapping id="plato" node="0>3|1" />
+  <i3dMapping id="workAreas" node="0>4" />
+  <i3dMapping id="workAreaStart" node="0>4|0" />
+  <i3dMapping id="workAreaWidth" node="0>4|1" />
+  <i3dMapping id="workAreaHeight" node="0>4|2" />
+  <i3dMapping id="sections" node="0>4|3" />
+  <i3dMapping id="section01" node="0>4|3|0" />
+  <i3dMapping id="section02" node="0>4|3|1" />
+  <i3dMapping id="section03" node="0>4|3|2" />
+  <i3dMapping id="section04" node="0>4|3|3" />
+  <i3dMapping id="section05" node="0>4|3|4" />
+  <i3dMapping id="section06" node="0>4|3|5" />
+  <i3dMapping id="section08" node="0>4|3|6" />
+  <i3dMapping id="section09" node="0>4|3|7" />
+  <i3dMapping id="ai" node="0>5" />
+  <i3dMapping id="sizeMarker" node="0>5|0" />
+  <i3dMapping id="sizeMarkerLeft" node="0>5|0|0" />
+  <i3dMapping id="sizeMarkerRight" node="0>5|0|1" />
+  <i3dMapping id="sizeMarkerBack" node="0>5|0|2" />
+  <i3dMapping id="areaMarker" node="0>5|1" />
+  <i3dMapping id="aiMarkerLeft" node="0>5|1|0" />
+  <i3dMapping id="aiMarkerRight" node="0>5|1|1" />
+  <i3dMapping id="aiMarkerBack" node="0>5|1|2" />
+  <i3dMapping id="aiCollisionNode" node="0>5|2" />
+  <i3dMapping id="effects" node="0>6" />
+  <i3dMapping id="fertilizerEffectLeft" node="0>6|0" />
+  <i3dMapping id="fertilizerEffectRight" node="0>6|1" />
+  <i3dMapping id="visual" node="0>7" />
+  <i3dMapping id="body" node="0>7|0" />
+  <i3dMapping id="body_sub_1650" node="0>7|1" />
+  <i3dMapping id="body_sub_1350" node="0>7|2" />
+  <i3dMapping id="decal" node="0>7|3" />
+  <i3dMapping id="rejilla" node="0>7|4" />
+  <i3dMapping id="decal_antigua" node="0>7|6" />
+  <i3dMapping id="decal_moderna" node="0>7|5" />
+  <i3dMapping id="pto" node="0>8" />
+  <i3dMapping id="ptoDetachNode" node="0>8|0" />
+  <i3dMapping id="config" node="0>9" />
+  <i3dMapping id="enganche_grande" node="0>9|0" />
+  <i3dMapping id="enganche_mediano" node="0>9|1" />
+  <i3dMapping id="bola_iz" node="0>9|2" />
+  <i3dMapping id="bola_de" node="0>9|3" />
+</i3dMappings>
+</vehicle>

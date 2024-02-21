@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="abo_kubota" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="textures/1340_specular.dds"/>
+    <File fileId="3" filename="textures/1350_normal.dds"/>
+    <File fileId="21" filename="textures/Kubota_Logo.dds"/>
+    <File fileId="19" filename="textures/kuhnAxis402mGrid_diffuse.dds"/>
+    <File fileId="20" filename="textures/kuhnAxis402mGrid_normal.dds"/>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="13" filename="$data/shared/assets/assetLibraryDecals_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/assets/assetLibraryDecals_normal.png"/>
+    <File fileId="15" filename="$data/shared/assets/assetLibraryDecals_vmask.dds"/>
+    <File fileId="17" filename="$data/shared/assets/assetLibraryStickers_diffuse.dds"/>
+    <File fileId="11" filename="$data/shared/connectionHoses/connectors_normal.png"/>
+    <File fileId="12" filename="$data/shared/connectionHoses/connectors_vmask.dds"/>
+    <File fileId="18" filename="$data/shared/default_normal.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="1350_mat_ryc1" materialId="4" diffuseColor="1 1 1 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.7157 0.0578 0.0015 0"/>
+      <CustomParameter name="colorMat1" value="1 1 1 40"/>
+      <CustomParameter name="colorMat2" value="0.0331 0.0409 0.0482 0"/>
+      <CustomParameter name="colorMat3" value="1 1 1 1"/>
+      <CustomParameter name="colorMat4" value="0.421 0.431 0.369 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="1 0 0 27"/>
+    </Material>
+    <Material name="assetLibraryDecals_mat" materialId="5" customShaderId="5" customShaderVariation="colorMask">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <Glossmap fileId="15"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.5356 0.0254 0.0254 1"/>
+      <CustomParameter name="colorMat1" value="0.5356 0.0254 0.0254 8"/>
+      <CustomParameter name="colorMat2" value="0.673 0.4704 0.022 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="bola_mat_ryc1" materialId="6" diffuseColor="0.8 0.8 0.8 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="connectors_mat" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.5356 0.0254 0.0254 1"/>
+      <CustomParameter name="colorMat1" value="0.5356 0.0254 0.0254 8"/>
+      <CustomParameter name="colorMat2" value="0.673 0.4704 0.022 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="decal_letras_mat_ryc1" materialId="8" alphaBlending="true" customShaderId="5" customShaderVariation="Decal">
+      <Texture fileId="21"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+    </Material>
+    <Material name="decal_mat_ryc1" materialId="9" customShaderId="5" customShaderVariation="Decal">
+      <Texture fileId="17"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+    </Material>
+    <Material name="fillVolume_mat_ryc1" materialId="10" diffuseColor="0.8 0.8 0.8 1" specularColor="0.494118 1 0">
+    </Material>
+    <Material name="lambert1" materialId="11" diffuseColor="0 0 0 1">
+    </Material>
+    <Material name="plato_mat_ryc1" materialId="12" diffuseColor="0.8 0.8 0.8 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.033 0.041 0.043 0"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="regilla_mat_ryc1" materialId="13" alphaBlending="true" customShaderId="5" customShaderVariation="Decal_colorMask">
+      <Texture fileId="19"/>
+      <Normalmap fileId="20"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.6 0.6 0.6 3"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="kubota_vs.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="kubota_maicomponet" dynamic="true" compound="true" collisionMask="2109442" clipDistance="300" nodeId="39" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <TransformGroup name="attachable" nodeId="40">
+          <TransformGroup name="attacherJoint" translation="-0.001 0.259155 0.775969" rotation="0 90 0" nodeId="41">
+            <Shape shapeId="2" name="bola1" translation="0 0 0.432" clipDistance="300" nodeId="42" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="2" name="bola2" translation="0 0 -0.432" clipDistance="300" nodeId="43" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="topReferencePoint" translation="5.58794e-08 0.82735 0.758" nodeId="44">
+            <Shape shapeId="2" name="bola3" clipDistance="300" nodeId="45" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="connectionHoses" nodeId="46">
+            <TransformGroup name="hydraulicIn01" translation="-0.0424818 0.36739 0.760979" rotation="40.4662 0 0" nodeId="47">
+              <Shape shapeId="3" name="cable_hidra" translation="0.163 -0.0550109 -0.203461" rotation="-40.4662 -0 0" clipDistance="300" nodeId="48" materialIds="4" castsShadows="true" receiveShadows="true">
+                <TransformGroup name="hydraulicIn01_detachedAdapter" translation="0 0 -2.37497e-08" rotation="90.0002 -0 0" nodeId="49">
+                  <Shape shapeId="4" name="hydraulic" clipDistance="50" nodeId="50" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+              </Shape>
+            </TransformGroup>
+            <Shape shapeId="5" name="electric" translation="0.320216 0.705271 0.676" rotation="180 -5.00896e-06 180" clipDistance="50" nodeId="51" materialIds="7" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="referencePoint" translation="0 0 -0.103913" rotation="0 180 0" nodeId="52"/>
+              <Shape shapeId="6" name="cab" translation="0 0.0284315 -0.04" rotation="0 -0 -5.789e-14" clipDistance="50" nodeId="53" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="7" name="decals" translation="0.000168574 -0.00623945 -0.022" clipDistance="30" nodeId="54" materialIds="5" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+              <Shape shapeId="8" name="electric_enchu" translation="-1.89968e-17 -1.89968e-17 -0.111326" rotation="0 -4.07111e-13 3.07862e-14" clipDistance="50" nodeId="55" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+          </TransformGroup>
+          <TransformGroup name="hc" translation="0.192676 0.357018 0.392913" rotation="0 -10.9591 0" nodeId="56"/>
+        </TransformGroup>
+        <TransformGroup name="lights" nodeId="57">
+          <TransformGroup name="sharedLights" nodeId="58">
+            <TransformGroup name="yellowRectangle_01_01" translation="0.668 0.53084 -0.452541" rotation="-180 -1.86693e-05 90" scale="0.3 0.3 0.3" nodeId="59"/>
+            <TransformGroup name="yellowRectangle_01_02" translation="-0.668 0.530839 -0.452541" rotation="0 -1.86693e-05 90" scale="0.3 0.3 0.3" nodeId="60"/>
+            <TransformGroup name="redRound_02_01" translation="0.483 0.584894 -0.456678" rotation="-90 -0 0" nodeId="61"/>
+            <TransformGroup name="redRound_02_02" translation="-0.483 0.584894 -0.456678" rotation="-90 -0 0" nodeId="62"/>
+            <TransformGroup name="faro_iz" translation="0.58 0.574747 -0.456408" rotation="-90 0 -180" scale="1.5 1.5 1.5" nodeId="63"/>
+            <TransformGroup name="faro_de" translation="-0.58 0.574747 -0.456408" rotation="-90 0 -180" scale="1.5 1.5 1.5" nodeId="64"/>
+          </TransformGroup>
+          <TransformGroup name="staticLights" nodeId="65">
+            <TransformGroup name="turnlightLef" nodeId="66"/>
+            <TransformGroup name="turnlightRight" nodeId="67"/>
+          </TransformGroup>
+          <TransformGroup name="backLights" nodeId="68">
+            <Light name="backLightsHigh1" translation="0.581583 0.522512 -0.521391" rotation="-25 0 0" clipDistance="75" nodeId="69" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2">
+              <Light name="backLightsHigh2" translation="-1.16292 2.84217e-16 4.26326e-16" clipDistance="75" nodeId="70" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="2.5" coneAngle="130" dropOff="2"/>
+            </Light>
+          </TransformGroup>
+          <TransformGroup name="turnLights" nodeId="71">
+            <Light name="turnLightLeftBack" translation="0.590453 0.589811 -0.599846" rotation="-20 -10 0" clipDistance="75" nodeId="72" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="120" dropOff="3"/>
+            <Light name="turnLightRightBack" translation="-0.576 0.569693 -0.570794" rotation="-20 10 0" clipDistance="75" nodeId="73" type="spot" color="0.31 0.14 0" emitDiffuse="true" emitSpecular="true" range="4" coneAngle="120" dropOff="3"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="fillUnit" nodeId="74">
+          <Shape shapeId="9" name="exactFillRootNode" translation="0 1.52781 -0.0329519" visibility="false" kinematic="true" compound="true" collisionMask="1073741824" nodeId="75" materialIds="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="10" name="fillVolume" rotation="-6.83019e-06 -0 0" clipDistance="300" nodeId="76" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="11" name="fillVolume1" rotation="-6.83019e-06 -0 0" clipDistance="300" nodeId="77" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="movingParts" nodeId="78">
+          <TransformGroup name="spreaderLeft" translation="0 0.228536 -0.009" clipDistance="300" nodeId="79">
+            <TransformGroup name="spreaderLeft_lod01" translation="0 -7.10543e-17 -8.88178e-18" clipDistance="300" nodeId="80"/>
+            <Shape shapeId="12" name="tubo" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="81" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape shapeId="13" name="plato" translation="0 0.407 0" clipDistance="300" nodeId="82" materialIds="12" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="workAreas" nodeId="83">
+          <TransformGroup name="workAreaStart" translation="0 0 -0.602389" nodeId="84"/>
+          <TransformGroup name="workAreaWidth" translation="-4 0 -1" nodeId="85"/>
+          <TransformGroup name="workAreaHeight" translation="4 0 -1" nodeId="86"/>
+          <TransformGroup name="sections" translation="0 0 -5" nodeId="87">
+            <TransformGroup name="section01" translation="3 0 0" nodeId="88"/>
+            <TransformGroup name="section02" translation="2 0 0" nodeId="89"/>
+            <TransformGroup name="section03" translation="1 0 0" nodeId="90"/>
+            <TransformGroup name="section04" translation="0.5 0 0" nodeId="91"/>
+            <TransformGroup name="section05" translation="-0.5 0 0" nodeId="92"/>
+            <TransformGroup name="section06" translation="-1 0 0" nodeId="93"/>
+            <TransformGroup name="section08" translation="-2 0 0" nodeId="94"/>
+            <TransformGroup name="section09" translation="-3 0 0" nodeId="95"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="ai" nodeId="96">
+          <TransformGroup name="sizeMarker" nodeId="97">
+            <TransformGroup name="sizeMarkerLeft" translation="1.03494 0 0.928195" nodeId="98"/>
+            <TransformGroup name="sizeMarkerRight" translation="-1.035 0 0.928195" nodeId="99"/>
+            <TransformGroup name="sizeMarkerBack" translation="1.035 0 -0.897046" nodeId="100"/>
+          </TransformGroup>
+          <TransformGroup name="areaMarker" nodeId="101">
+            <TransformGroup name="aiMarkerLeft" translation="4 0 -4" nodeId="102"/>
+            <TransformGroup name="aiMarkerRight" translation="-4 0 -4" nodeId="103"/>
+            <TransformGroup name="aiMarkerBack" translation="0 0 -1" nodeId="104"/>
+          </TransformGroup>
+          <TransformGroup name="aiCollisionNode" translation="0 0 0.600566" nodeId="105"/>
+        </TransformGroup>
+        <TransformGroup name="effects" nodeId="106">
+          <TransformGroup name="fertilizerEffectLeft" translation="0 0.221343 -0.633452" nodeId="107"/>
+          <TransformGroup name="fertilizerEffectRight" translation="0 0.221343 -0.633452" nodeId="108"/>
+        </TransformGroup>
+        <TransformGroup name="visual" nodeId="109">
+          <Shape shapeId="14" name="body" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="110" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="15" name="body_sub_1650" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="111" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="16" name="body_sub_1350" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="112" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="17" name="decal" rotation="-9.33467e-06 -0 0" scale="1.001 1.001 1.004" clipDistance="300" nodeId="113" materialIds="9" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="18" name="rejilla" clipDistance="300" nodeId="114" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="19" name="decal_antigua" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="115" materialIds="8" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="20" name="decal_moderna" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="116" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="pto" translation="0.00010148 0.265415 0.564159" rotation="180 -1.86693e-05 180" nodeId="117">
+          <TransformGroup name="ptoDetachNode" translation="-0.00925121 -0.169108 -0.475608" rotation="-20.5704 -1.36604e-05 0" nodeId="118"/>
+        </TransformGroup>
+        <TransformGroup name="config" nodeId="119">
+          <Shape shapeId="21" name="enganche_grande" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="120" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="22" name="enganche_mediano" rotation="-9.33467e-06 -0 0" clipDistance="300" nodeId="121" materialIds="4" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="23" name="bola_iz" clipDistance="300" nodeId="122" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="24" name="bola_de" clipDistance="300" nodeId="123" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+</i3D>

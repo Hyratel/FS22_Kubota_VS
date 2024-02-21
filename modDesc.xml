@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="67">
+    <author>raulycristi1 [VSR Modding Sur]</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Kubota VS Pack Fertilizers</en>
+    </title>
+<description>
+<en><![CDATA[Kubota VS Pack Fertilizer Spreader and Lime Spreader.
+
+-Main Color Settings
+-Vinyl Selection
+
+Price VS 1650: €19,850
+Price VS 1350: €18,350
+Price VS 800: €12,350
+Price VS 440: €8,350
+Price VS 330: €7,350
+Price VS 220: €6,350
+
+Working speed: 20km/h
+Working width: 9, 24, 42 m
+Capacity: 220, 330, 440, 800, 1350, 1650 L
+]]></en>
+<de><![CDATA[Kubota VS Pack Düngerstreuer und Kalkstreuer.
+
+-Hauptfarbeinstellungen
+-Vinyl-Auswahl
+
+Preis gegenüber 1650: 19.850 €
+Preis gegenüber 1350: 18.350 €
+Preis gegenüber 800: 12.350 €
+Preis gegenüber 440: 8.350 €
+Preis VS 330: 7.350 €
+Preis gegenüber 220: 6.350 €
+
+Arbeitsgeschwindigkeit: 20 km/h
+Arbeitsbreite: 9, 24, 42 m
+Fassungsvermögen: 220, 330, 440, 800, 1350, 1650 L
+]]></de>
+<es><![CDATA[Kubota VS Pack Abonadora de Fertilizante y Esparcidor de Cal.
+
+-Configuración Color Principal
+-Seleccion de Vinilos
+
+Precio VS 1650: 19.850€
+Precio VS 1350: 18.350€
+Precio VS 800: 12.350€
+Precio VS 440: 8.350€
+Precio VS 330: 7.350€
+Precio VS 220: 6.350€
+
+Velocidad de Trabajo: 20 km/h
+Anchura de Trabajo: 9, 24, 42 m
+Capacidad: 220, 330, 440, 800, 1350, 1650 L
+]]></es>
+</description>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <storeItems>
+        <storeItem xmlFilename="kubota_vs.xml"/>
+        <storeItem xmlFilename="kubota_vs800.xml"/>
+        <storeItem xmlFilename="kubota_vs220.xml"/>
+    </storeItems>
+	
+	<l10n>
+        <text name="configuration_pegatinas">
+            <en>Decal</en>
+            <de>Abziehbild</de>
+            <es>Pegatinas</es>
+        </text>
+        <text name="configuration_ninguna">
+            <en>No</en>
+            <de>No</de>
+            <es>No</es>
+        </text>
+        <text name="configuration_nuevas">
+            <en>New</en>
+            <de>Neu</de>
+            <es>Nuevas</es>
+        </text>
+        <text name="configuration_antigua">
+            <en>Old</en>
+            <de>Alt</de>
+            <es>Antiguas</es>
+        </text>
+        <text name="configuration_medidas">
+            <en>Tractor Size</en>
+            <de>Traktorgröße</de>
+            <es>Tamaño Tractor</es>
+        </text>
+        <text name="configuration_m">
+            <en>Tractor M</en>
+            <de>Traktor M</de>
+            <es>Tractor M</es>
+        </text>
+        <text name="configuration_xl">
+            <en>Tractor XL</en>
+            <de>Traktor XL</de>
+            <es>Tractor XL</es>
+        </text>
+		<!--color-->
+		<text name="configuration_kubota_orange">
+			<en>Orange Kubota Old</en>
+			<de>Orange Kubota Alt</de>
+			<es>Naranga Kubota Antiguo</es>
+		</text>
+		<text name="configuration_kubota_orange_2">
+			<en>Orange Kubota New</en>
+			<de>Orange Kubota Neu</de>
+			<es>Naranga Kubota Nuevo</es>
+		</text>
+		<text name="configuration_kubota_blue_enamel">
+			<en>Blue Enamel</en>
+			<de>Blaue Emaille</de>
+			<es>Azul Esmalte</es>
+		</text>
+		<text name="configuration_kubota_grey_enamel">
+			<en>Gray Enamel</en>
+			<de>Grau Emaille</de>
+			<es>Gris Esmalte</es>
+		</text>
+		<text name="configuration_kubota_beige_enamel">
+			<en>Beige Enamel</en>
+			<de>Beige Emaille</de>
+			<es>Beige Esmalte</es>
+		</text>
+		<text name="configuration_kubota_black_enamel">
+			<en>Black Enamel</en>
+			<de>Schwarz Emaille</de>
+			<es>Negro Esmalte</es>
+		</text>
+    </l10n>	
+	
+</modDesc>
